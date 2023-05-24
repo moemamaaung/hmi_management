@@ -1,0 +1,115 @@
+.height{
+    width: 100%;
+    height: 500px;
+}
+
+.singlePrice {
+    text-align: center;
+    background:  skyblue;
+    transition: .7s;
+    margin-top: 20px;
+    
+  }
+  .singlePrice h3 {
+    font-size: 25px;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    margin-top: -100px;
+    font-family: poppins;
+    color: #fff;
+  }
+  .singlePrice h4 {
+    font-size: 30px;
+    color: #fff;
+  }
+  .singlePrice h4 span.sup {
+    vertical-align: text-top;
+    font-size: 25px;
+  }
+  .dealTop {
+    position: relative;
+    background: #082045;
+    font-size: 16px;
+    padding: 136px 24px 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 68%, 50% 100%, 0 67%);
+  }
+  .dealTop::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 0;
+    height: 0;
+    border-top: 50px solid rgb(135, 228, 235);
+    border-left: 175px solid transparent;
+    border-right: 183px solid transparent;
+  }
+  .dealBottom {
+    padding: 56px 16px 0;
+    
+  }
+  .dealBottom ul {
+    margin: 0;
+    padding: 0;
+  }
+  .dealBottom  ul li {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 10px;
+    border-top: 1px solid #E4E4E4;
+    padding-top: 10px;
+    list-style: none;
+    
+  }
+  .dealItem  li{
+    display: block;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+    line-height: 8px;
+    padding-left: 5px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-top: 20px;
+
+   
+  }
+  .btn{
+    color: #fff; 
+    background:#082045;
+    width: 50%; 
+    
+  }
+  .text{
+    text-align: center;
+    font-weight: 300px;
+    margin-bottom: 20px;
+   
+}
+
+  
+  
+  .singlePrice:hover {
+    background: #60a7e6;
+  }
+
+  .margin{
+   width: 30%;
+   height: 300px;
+  }
+
+  .programFee{
+    color:#082045;
+   
+    margin-bottom: 150px;
+
+  }
+
+  
+  
+  
+  

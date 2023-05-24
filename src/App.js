@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, Routes } from "react-router-dom";
+import Layout from "./component/Layout";
+import Payment from "./component/Payment";
+import Login from "./component/Login";
+import Card from "./component/Card";
+import Program from "./component/page/Program";
+import About from "./component/page/About";
+import TeacherList from "./component/page/TeacherList";
+import Contactus from "./component/page/Contactus";
+import TeacherBio from "./teacher/TeacherBio";
+import TeacherSample from "./teacher/TeacherSample";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+  
+      <Layout />
+
+        <Routes>
+            <Route path='/' element={<Card />} />
+            <Route path='/program-fee' element={<Program />} />
+            <Route path='/payment' element={<Payment />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contactus />} />
+            <Route path='/teacher' element={<TeacherList/>} />
+            <Route path=":teacherId" element={<TeacherBio />} />
+            <Route path="/sample" element={<TeacherSample/>} />
+           
+        </Routes>
     </div>
+
+
   );
 }
 
