@@ -1,51 +1,30 @@
 import { Link } from "react-router-dom"
 import classes from './MainNavigation.module.css'
-import logo from '../images/hmilogo.png'
+import logo from '../images/navhmi.jpg'
 
 const MainNavigation = () => {
 
-  const login = `btn btn-primary me-5  ${classes.login}`
- 
-  const sub = `nav-item dropdown me-5 ${classes.sub}`
-  
-  const navbg = `navbar  navbar-expand-lg fixed-top  ${classes.navbg}`
-  const img = `rounded-circle  ${classes.img}`
-  const text = `nav-link text-light me-5 ${classes.text}`
-  const text1 = `nav-link active font-weight-semi-bold dropdown-toggle text-light ${classes.text1}`
-  const t1 = `text-light ${classes.t1}`
- 
-  const menu1 = `navbar-nav  me-0 ${classes.menu1}`
+  const login = `btn btn-primary me-3  ${classes.login}`
+  const navbg = `navbar navbar-expand-lg navbar-light    ${classes.navbg}`
+  const text = `nav-link text-light me-4 ${classes.text}`
+  const text1 = `nav-link active font-weight-semi-bold dropdown-toggle text-light me-4 ${classes.text1}`
+  const menu1 = `navbar-nav ml-auto ${classes.menu1}`
 
   return (
-   
 
-
-        <nav className={navbg} >
-           {/* <div className="container-fluid ">  */}
-            <div className="col-lg-3 ms-5">
-              <a href="" className="text-decoration-none ">
-              <div className="row">
-              <div className="col-md-2 ">
-              <img src={logo} className={img} />
-              </div>
-              <div className="col-md-8 ms-3">
-              <h2 className={t1}>H <i class="fas fa-globe fa-sm "></i> S T </h2>
-                <h5 className="text-light mt-0">MYANMAR INSTITUTE</h5>
-              </div>
-              </div>
-         
-        
-              </a>
-            </div>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+<header class="top-navbar">
+		<nav class={navbg}>
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src={logo} alt="" />
+				</a>
+        <button className="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
               <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="main_nav">
-          
-              <ul className={menu1}>
-                <li className={sub}>
-                  <a className={text1} href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subjects
-                    {/* <i class="fas fa-book-open fa-sm mx-1"></i>  Subjects */}
+        </button>
+				<div class="collapse navbar-collapse" id="main_nav">
+					<ul class={menu1}>
+          <li class="nav-item dropdown">
+          <a className={text1} href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subjects
                   </a>
                   <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="#">C Programming</a></li>
@@ -53,34 +32,18 @@ const MainNavigation = () => {
                     <li><hr className="dropdown-divider" /></li>
                     <li><a className="dropdown-item" href="#">Something else here</a></li>
                   </ul>
-                </li>
-                <li className="nav-item "><Link to='/' className={text} href="#"> Home </Link></li>
-                <li className="nav-item"><Link to='/about' className={text} href="#"> About</Link></li>
-                <li className="nav-item"><Link to='/program-fee' className={text} href="#"> Program Fee </Link></li>
-                <li className="nav-item"><Link to='/teacher' className={text} href="#"> Teacher</Link></li>
-                <li className="nav-item"><Link to='/contact' className={text} href="#"> Contact</Link></li>
-                
-                {/* <li className="nav-item"><Link to='/card' className={text} href="#"> Card</Link></li> */}
-              </ul> 
-              <form className="d-flex ">
-
-                <Link to='/login' className={login} type="button">Login</Link>
-              </form></div>
-           
-           {/* </div>  */}
-
-        </nav>
-  
-
-
-
-
-
-
-
-
-
-
+						</li>
+						<li class="nav-item active"><Link to='/' class={text}>Home</Link></li>
+						<li class="nav-item"><Link to='/about' class={text} >AboutUs</Link></li>
+					  <li class="nav-item"><Link to='/teacher' class={text} >Teachers</Link></li>
+						<li class="nav-item"><Link to='program-fee' class={text} >Pricing</Link></li>
+						<li class="nav-item"><Link to='/contact' class={text}>Contact</Link></li>
+					</ul>
+					<Link className={login} type="button">Login</Link>
+          </div>
+			</div>
+		</nav>
+	</header>
 
   )
 }
